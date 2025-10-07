@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  timetable:
+    build: .
+    container_name: timetable_app
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    environment:
+      - TZ=Asia/Tashkent   # PC vaqti bilan bir xil zona qo'yish
+    command: ["python", "main.py"]
