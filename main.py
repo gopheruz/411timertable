@@ -228,7 +228,7 @@ class RescheduleClass(StatesGroup):
 @dp.message(Command('start'))
 async def start(message: Message):
     keyboard = ReplyKeyboardMarkup(keyboard=[
-        [KeyboardButton(text="📚 Hozirgi dars"), KeyboardButton(text="⏭ Eng yaqin dars")],
+        [KeyboardButton(text="📚 Hozirgi dars"),]
         [KeyboardButton(text="📅 Haftalik jadval")],
         [KeyboardButton(text="📆 Dushanba"), KeyboardButton(text="📆 Seshanba")],
         [KeyboardButton(text="📆 Chorshanba"), KeyboardButton(text="📆 Payshanba")],
